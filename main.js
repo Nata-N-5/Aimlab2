@@ -30,7 +30,7 @@ document.body.appendChild(VRButton.createButton(renderer));
 // Controles
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.target.set(0, 1.5, 0);
-controls.update();
+//controls.update();
 
 // LUZ
 const light = new THREE.HemisphereLight(0xffffff, 0x444444, 1.2);
