@@ -10,10 +10,7 @@ scene.background = new THREE.Color(0x222222);
 // Cámara
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 camera.position.set(0, 2, 6);
-const cameraGroup = new THREE.Group();
-cameraGroup.add(camera);
-scene.add(cameraGroup);
-scene.position.y = -1.6;
+
 
 // Renderizador
 const renderer = new THREE.WebGLRenderer({ antialias: true });
