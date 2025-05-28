@@ -13,6 +13,7 @@ camera.position.set(0, 2, 6);
 const cameraGroup = new THREE.Group();
 cameraGroup.add(camera);
 scene.add(cameraGroup);
+scene.position.y = -1.6;
 
 // Renderizador
 const renderer = new THREE.WebGLRenderer({ antialias: true });
