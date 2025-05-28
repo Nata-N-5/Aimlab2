@@ -53,12 +53,13 @@ const path = '/';
 // Piso
 const floor = new THREE.Mesh(new THREE.BoxGeometry(10, 0.1, 10), basicMaterial);
 floor.position.y = 0;
+floor.position.z = -6;
 scene.add(floor);
 
 // Techo
 const ceiling = new THREE.Mesh(new THREE.BoxGeometry(10, 0.1, 6   ), basicMaterial);
 ceiling.position.y = 5;
-ceiling.position.z = -2;
+ceiling.position.z = -2-6;
 scene.add(ceiling);
 
 // Paredes
@@ -74,9 +75,9 @@ function createWall2(pos, rot) {
   wall.rotation.y = rot;
   scene.add(wall);
 }
-createWall({ x: 0, y: 2.5, z: -5 }, 0);               // Fondo
-createWall2({ x: -5, y: 2.5, z: -2 }, Math.PI / 2);     // Izquierda
-createWall2({ x: 5, y: 2.5, z: -2 }, Math.PI / 2);      // Derecha
+createWall({ x: 0, y: 2.5, z: -5-6 }, 0);               // Fondo
+createWall2({ x: -5, y: 2.5, z: -2-6 }, Math.PI / 2);     // Izquierda
+createWall2({ x: 5, y: 2.5, z: -2-6 }, Math.PI / 2);      // Derecha
 
 // Plataforma interna
 function createPlatformBlock2(x, y, z) {
@@ -123,8 +124,8 @@ function createTarget() {
   do {
     x = Math.random() * 8 - 4;
     y = Math.random() * 3 + 1.2;
-    z = Math.random() * -4 - 1;
-  } while (x > 4 && z < -2); // Evita zona del bloque interno
+    z = Math.random() * -4 - 1-6;
+  } while (x > 4 && z < -2-6); // Evita zona del bloque interno
 
   sphere.position.set(x, y, z);
   scene.add(sphere);
