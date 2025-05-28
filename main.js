@@ -9,15 +9,7 @@ scene.background = new THREE.Color(0x222222);
 
 // Cámara
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-
-// Crear grupo para la cámara
-const cameraGroup = new THREE.Group();
-cameraGroup.add(camera);
-scene.add(cameraGroup);
-
-// Posicionar el grupo de la cámara (esto mueve la cámara en conjunto)
-cameraGroup.position.set(0, 2, 6);
-
+camera.position.set(0, 2, 6);
 
 // Renderizador
 const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -29,8 +21,8 @@ document.body.appendChild(VRButton.createButton(renderer));
 
 // Controles
 const controls = new OrbitControls(camera, renderer.domElement);
-//controls.target.set(0, 1.5, 0);
-//controls.update();
+controls.target.set(0, 1.5, 0);
+controls.update();
 
 // LUZ
 const light = new THREE.HemisphereLight(0xffffff, 0x444444, 1.2);
