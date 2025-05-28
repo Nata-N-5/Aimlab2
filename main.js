@@ -9,7 +9,12 @@ scene.background = new THREE.Color(0x222222);
 
 // Cámara
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.set(0, 5, 6);
+camera.position.set(0, 5, 0);
+const cameraRig = new THREE.Group();
+cameraRig.add(camera);
+scene.add(cameraRig);
+cameraRig.position.z = 6; // Aumentá este valor para alejar más
+
 
 
 // Renderizador
