@@ -17,7 +17,7 @@ const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 renderer.xr.enabled = true;
-renderer.xr.setReferenceSpaceType('local');
+renderer.xr.setReferenceSpaceType('local-floor');
 document.body.appendChild(VRButton.createButton(renderer));
 
 // Controles
