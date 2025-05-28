@@ -21,7 +21,7 @@ renderer.xr.setReferenceSpaceType('local');
 document.body.appendChild(VRButton.createButton(renderer));
 
 // Controles
-const controls = new OrbitControls(camera, renderer.domElement);
+//const controls = new OrbitControls(camera, renderer.domElement);
 //controls.target.set(0, 1.5, 0);
 //controls.update();
 
@@ -84,7 +84,7 @@ function createPlatformBlock2(x, y, z) {
   block.position.set(x, y, z);
   scene.add(block);
 }
-createPlatformBlock2(4.5, 2.5, -4.5);
+//createPlatformBlock2(4.5, 2.5, -4.5);
 
 // Jugador (visual)
 const player = new THREE.Mesh(
@@ -92,7 +92,7 @@ const player = new THREE.Mesh(
   new THREE.MeshStandardMaterial({ color: 0x5555ff })
 );
 player.position.set(0, 0.9, 4.5);
-scene.add(player);
+//scene.add(player);
 
 // Raycaster y targets
 const raycaster = new THREE.Raycaster();
